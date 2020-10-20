@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}首页{% endblock %}
+
+{% block page_content %}
+    <br><h2 style="color: #666666">虚拟IP终端数量</h2><br>
+    <table class="table table-bordered">
+    <tr>
+        <th>vip</th>
+        <th>独立IP数量</th>
+        <th>来访IP列表</th>
+    </tr>
+        {% for i in u1 %}
+            <tr>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+            </tr>
+    {% endfor %}
+    </table>
+    <br><h2 style="color: #666666">独立IP访问统计</h2><br>
+    <table class="table table-bordered">
+    <tr>
+        <th>vip</th>
+        <th>node</th>
+        <th>独立IP数量</th>
+        <th>来访IP列表</th>
+    </tr>
+        {% for i in u2 %}
+            <tr>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+                <td>{{ i[3] }}</td>
+            </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
